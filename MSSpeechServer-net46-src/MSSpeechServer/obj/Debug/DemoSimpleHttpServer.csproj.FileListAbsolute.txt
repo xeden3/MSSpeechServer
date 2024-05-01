@@ -1,0 +1,13 @@
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\obj\Debug\DemoSimpleHttpServer.csproj.AssemblyReference.cache
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\obj\Debug\DemoSimpleHttpServer.csproj.CoreCompileInputs.cache
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\bin\Debug\DemoSimpleHttpServer.exe.config
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\bin\Debug\DemoSimpleHttpServer.exe
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\bin\Debug\DemoSimpleHttpServer.pdb
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\bin\Debug\log4net.dll
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\bin\Debug\log4net.xml
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\obj\Debug\DemoSimpleHttpServer.csproj.CopyComplete
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\obj\Debug\DemoSimpleHttpServer.exe
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\obj\Debug\DemoSimpleHttpServer.pdb
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\bin\Debug\Microsoft.Speech.dll
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\James\source\repos\DemoSimpleHttpServer\DemoSimpleHttpServer\bin\Debug\Newtonsoft.Json.xml
