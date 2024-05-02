@@ -1,5 +1,7 @@
 # MSSpeechServer
 
+[English](https://github.com/xeden3/MSSpeechServer/blob/main/README.md) | [中文说明](https://github.com/xeden3/MSSpeechServer/blob/main/README_CN.md) | [日本語説明](https://github.com/xeden3/MSSpeechServer/blob/main/README_JP.md)
+
 ## 项目描述
 
 MSSpeechServer是基于微软语音平台的REST服务器，为Windows提供文本转语音（TTS）功能。该项目设计用于在Linux x86_64平台上运行，并支持Docker镜像。它提供了两个主要的API用于读取语音库和生成TTS。
