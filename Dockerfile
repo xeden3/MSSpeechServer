@@ -31,7 +31,6 @@ RUN mv /bin/sh /bin/sh.old && \
 
 COPY libs/ /wine32/drive_c/libs
 COPY bin/ /wine32/drive_c/bin
-COPY bash/run_install.sh /wine32/drive_c/bash
 COPY bash/docker_entrypoint.sh /usr/bin/entrypoint
 
 RUN cp /wine32/drive_c/libs/tini/tini /tini && \

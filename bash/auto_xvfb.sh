@@ -1,4 +1,3 @@
-
 #!/bin/bash
 Xvfb "$DISPLAY" -screen "$XVFB_SCREEN" "$XVFB_RESOLUTION" -ac -nolisten tcp &
 _xvfb_pid="$!"
