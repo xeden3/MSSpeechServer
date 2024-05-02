@@ -47,7 +47,7 @@ Here is a simple installation guide:
 
 1. Clone the repository to your local machine:
    ```
-   git clone https://github.com/yourusername/MSSpeechServer.git
+   git clone https://github.com/xeden3/MSSpeechServer.git
    ```
 2. Navigate to the project directory:
    ```
@@ -59,7 +59,7 @@ Here is a simple installation guide:
    ```
 4. Run the Docker container:
    ```
-   docker run -p 8080:8080 msspeechserver
+   docker run -rm -p 8080:8080 msspeechserver
    ```
 Please note that this is a basic installation guide, and you may need to adjust it according to your specific situation.
 
