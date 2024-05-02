@@ -1,5 +1,7 @@
 # MSSpeechServer
 
+[中文说明](#https://github.com/xeden3/MSSpeechServer/README_CN.md) [日本語説明](#https://github.com/xeden3/MSSpeechServer/README_JP.md)
+
 ## Project Description
 
 MSSpeechServer is a REST server based on the Microsoft Speech Platform that provides text-to-speech (TTS) functionality for Windows. This project is designed to run on the Linux x86_64 platform and supports Docker images. It provides two main APIs for reading voice libraries and generating TTS.
@@ -59,7 +61,13 @@ Here is a simple installation guide:
    ```
 4. Run the Docker container:
    ```
-   docker run -rm -p 8080:8080 msspeechserver
+   docker run --rm -it -p 8080:8080 msspeechserver
+   ```
+   Pressing `Ctrl+C` will close and remove the container at this point.
+
+   Additionally, to run the container in the background, you can use the -d flag:
+   ```
+   docker run -d -p 8080:8080 msspeechserver
    ```
 Please note that this is a basic installation guide, and you may need to adjust it according to your specific situation.
 
@@ -71,6 +79,51 @@ MSSpeechServer provides two main APIs:
 - `http://localhost:8080/SetTTS`: This API is used to generate TTS.
 
 You can use these APIs by sending HTTP requests.
+
+### Using `/GetVoices` Endpoint
+
+The `/GetVoices` endpoint is used to retrieve the available voice libraries supported by MSSpeechServer. It returns a list of voice names (**voiceName**) along with their language codes.
+
+#### Example Response:
+
+```json
+{
+    "errcode": 0,
+    "errmsg": "",
+    "rtval": [
+        "Microsoft Server Speech Text to Speech Voice (en-US, ZiraPro)",
+        "Microsoft Server Speech Text to Speech Voice (zh-CN, HuiHui)",
+        "Microsoft Server Speech Text to Speech Voice (zh-HK, HunYee)"
+    ]
+}
+```
+
+### Using `/SetTTS` Endpoint
+
+The `/SetTTS` endpoint is used to generate text-to-speech (TTS) audio. It accepts the following parameters:
+
+- `text` (required): The text to be converted to speech.
+- `voiceName` (optional): The name of the voice package to be used for TTS. If not provided, the default voice will be used.
+
+#### Example Usage:
+
+1. **Using Default Voice (English):**
+
+   ```
+   GET /SetTTS?text=hello world
+   ```
+
+   This request will return an audio file with speech generated using the default English voice.
+
+2. **Using Specific Voice Package (Chinese):**
+
+   ```
+   GET /SetTTS?text=中文&voiceName=Microsoft Server Speech Text to Speech Voice (zh-CN, HuiHui)
+   ```
+
+   This request will return an audio file with speech generated using the specified Chinese voice package, "Microsoft Server Speech Text to Speech Voice (zh-CN, HuiHui)".
+
+**Note:** When using non-English TTS, ensure to select the appropriate voice package.
 
 ## Key Challenges and Solutions
 
