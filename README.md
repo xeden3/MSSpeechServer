@@ -1,6 +1,6 @@
 # MSSpeechServer
 
-[中文说明](#https://github.com/xeden3/MSSpeechServer/README_CN.md) [日本語説明](#https://github.com/xeden3/MSSpeechServer/README_JP.md)
+[中文说明](https://github.com/xeden3/MSSpeechServer/README_CN.md) | [日本語説明](https://github.com/xeden3/MSSpeechServer/README_JP.md)
 
 ## Project Description
 
