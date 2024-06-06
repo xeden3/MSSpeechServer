@@ -1,4 +1,4 @@
-﻿// Copyright (C) 2016 by David Jeske, Barend Erasmus and donated to the public domain
+// Copyright (C) 2016 by David Jeske, Barend Erasmus and donated to the public domain
 
 using SimpleHttpServer.Models;
 using System;
@@ -6,9 +6,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Diagnostics;
 
 namespace SimpleHttpServer
 {
@@ -123,6 +125,16 @@ namespace SimpleHttpServer
         protected virtual HttpResponse RouteRequest(Stream inputStream, Stream outputStream, HttpRequest request)
         {
 
+            AppDomain.CurrentDomain.FirstChanceException += (sender, eventArgs) =>
+            {
+                if (eventArgs.Exception is COMException comEx)
+                {
+                    Console.WriteLine("First chance COMException: " + comEx.Message);
+                    Console.WriteLine("ErrorCode: " + comEx.ErrorCode);
+                    Console.WriteLine("StackTrace: " + comEx.StackTrace);
+                }
+            };
+
             List<Route> routes = this.Routes.Where(x => Regex.Match(request.Url, x.UrlRegex).Success).ToList();
 
             if (!routes.Any())
@@ -150,8 +162,18 @@ namespace SimpleHttpServer
             request.Route = route;
             try {
                 return route.Callable(request);
+            }
+            catch (COMException comEx)
+            {
+                Console.WriteLine("COMException: " + comEx.Message);
+                Console.WriteLine("ErrorCode: " + comEx.ErrorCode);
+                Console.WriteLine("StackTrace: " + comEx.StackTrace);
+                return HttpBuilder.InternalServerError();
+
             } catch(Exception ex) {
                 // log.Error(ex);
+                Console.WriteLine("Exception: " + ex.Message);
+                Console.WriteLine("StackTrace: " + ex.StackTrace);
                 return HttpBuilder.InternalServerError();
             }
 
