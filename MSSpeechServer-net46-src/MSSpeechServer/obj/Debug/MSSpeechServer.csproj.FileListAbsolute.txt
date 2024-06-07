@@ -22,3 +22,12 @@ C:\Users\James\source\repos\DemoSimpleHttpServer\MSSpeechServer\obj\Debug\MSSpee
 C:\Users\James\source\repos\DemoSimpleHttpServer\MSSpeechServer\obj\Debug\MSSpeechServer.csproj.CopyComplete
 C:\Users\James\source\repos\DemoSimpleHttpServer\MSSpeechServer\obj\Debug\MSSpeechServer.exe
 C:\Users\James\source\repos\DemoSimpleHttpServer\MSSpeechServer\obj\Debug\MSSpeechServer.pdb
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\bin\Debug\MSSpeechServer.exe.config
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\bin\Debug\MSSpeechServer.exe
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\bin\Debug\MSSpeechServer.pdb
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\obj\Debug\MSSpeechServer.csproj.AssemblyReference.cache
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\obj\Debug\MSSpeechServer.csproj.CoreCompileInputs.cache
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\obj\Debug\MSSpeechServer.csproj.CopyComplete
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\obj\Debug\MSSpeechServer.exe
+C:\Users\James\Desktop\MSSpeechServer\MSSpeechServer\MSSpeechServer-net46-src\MSSpeechServer\obj\Debug\MSSpeechServer.pdb

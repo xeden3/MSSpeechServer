@@ -36,29 +36,38 @@ namespace SimpleHttpServer
         #region Public Methods
         public void HandleClient(TcpClient tcpClient)
         {
-                Stream inputStream = GetInputStream(tcpClient);
-                Stream outputStream = GetOutputStream(tcpClient);
+            Stream inputStream = GetInputStream(tcpClient);
+            Stream outputStream = GetOutputStream(tcpClient);
+            try
+            {
                 HttpRequest request = GetRequest(inputStream, outputStream);
 
                 // route and handle the request...
-                HttpResponse response = RouteRequest(inputStream, outputStream, request);      
-          
-                Console.WriteLine("{0} {1}",response.StatusCode,request.Url);
+                HttpResponse response = RouteRequest(inputStream, outputStream, request);
+
+                Console.WriteLine("{0} {1}", response.StatusCode, request.Url);
                 // build a default response for errors
-                if (response.Content == null) {
-                    if (response.StatusCode != "200") {
+                if (response.Content == null)
+                {
+                    if (response.StatusCode != "200")
+                    {
                         response.ContentAsUTF8 = string.Format("{0} {1} <p> {2}", response.StatusCode, request.Url, response.ReasonPhrase);
                     }
                 }
 
                 WriteResponse(outputStream, response);
-
                 outputStream.Flush();
-                outputStream.Close();
-                outputStream = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("HandleClient Exception:" + ex.ToString());
+            }
+            outputStream.Close();
+            outputStream = null;
 
-                inputStream.Close();
-                inputStream = null;
+            inputStream.Close();
+            inputStream = null;
+            
 
         }
 

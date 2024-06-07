@@ -8,7 +8,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Microsoft.Speech.Synthesis;
 
-namespace DemoSimpleHttpServer
+namespace MSSpeechServer
 {
     internal class Program
     {
