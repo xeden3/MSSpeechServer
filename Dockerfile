@@ -19,7 +19,8 @@ RUN apt-get update && \
     mkdir /tmp/.X11-unix && \
     chmod 1777 /tmp/.X11-unix && \
     dpkg --add-architecture i386 && \
-    apt-get update 
+    apt-get update && \
+    apt-get remove -y python3-crypto 
     
 COPY bash/auto_xvfb.sh /usr/bin/auto_xvfb
 
